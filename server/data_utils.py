@@ -40,19 +40,7 @@ def get_date_notes(start,end):
     if end_obj > today:
         end_obj = today
     for date in dates_between(start_obj, end_obj):
-        # print()
         result += get_one_day_note(date.strftime("%Y-%m-%d"))
-    # date_list = os.listdir(DATE_DIR)
-    # for iDate in date_list:
-    #     date_path = os.path.join(DATE_DIR, iDate)
-    #     note_list = os.listdir(date_path)
-    #     for item in note_list:
-    #         todo_hash = item.split('&')[0]
-    #         todo_info = get_todo_info(todo_hash)
-    #         result.append({
-    #             'title': todo_info['title'],
-    #             'start': iDate
-    #         })
     return result
 
 def get_one_day_note(date):
